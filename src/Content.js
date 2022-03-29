@@ -5,11 +5,16 @@ const monsters = Monsters.map(
     (Monster) => {
 
         return(
-            <div key={Monster.monster}>
-                <h4>{Monster.monster}</h4>
-                <p>Risk: {Monster.risk}</p>
-                <p>Location: {Monster.location}</p>
-                <p><img src={Monster.image} alt="" /></p>
+            <div>
+                <div className="card" style={{width: "50%"}} key={Monster.monster}>
+                    <img src={Monster.image} alt="" className="card-img-top" />
+                    <div className="card-body">
+                    <h4 className="card-title">{Monster.monster}</h4>
+                    <p className="card-text">Risk: {Monster.risk}</p>
+                    <p className="card-text">Location: {Monster.location}</p>
+                    </div>
+                </div>
+                <br /><br />
             </div>
         );
     }
